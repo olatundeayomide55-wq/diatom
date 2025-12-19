@@ -173,45 +173,102 @@
 </section>
 
   <section style="max-width: 1200px; margin: 0 auto; padding: 20px;">
-    <!-- BOARD -->
+    <style>
+        /* Grid Styling */
+        .board-container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr); /* Default: 5 items per row */
+            gap: 20px;
+        }
+
+        /* Responsive Design for Tablets */
+        @media (max-width: 768px) {
+            .board-container {
+                grid-template-columns: repeat(2, 1fr); /* 2 items per row on tablets */
+            }
+        }
+
+        /* Responsive Design for Mobile */
+        @media (max-width: 480px) {
+            .board-container {
+                grid-template-columns: repeat(1, 1fr); /* 1 item per row on mobile */
+            }
+        }
+
+        /* Individual Card Styling */
+        .board-member {
+            text-align: center;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .board-member:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .board-member img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 1/1; /* Ensures square images */
+            object-fit: cover; /* Scales images to fill */
+        }
+
+        .board-member h3 {
+            margin: 10px 0 5px;
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        .board-member p {
+            font-size: 1em;
+            color: #777;
+            margin-bottom: 15px;
+        }
+    </style>
+
+    <!-- Section Title -->
     <h2 style="text-align: center; margin-bottom: 20px; font-size: 2em; color: #333;">Meet Our Board of Directors</h2>
 
-    <!-- BOARD -->
+    <!-- Section Description -->
     <p style="text-align: left; margin-bottom: 20px; font-size: 1.2em; color: #555; line-height: 1.6;">
         Committed to integrity and long-term impact, our Board helps uphold the governance, transparency, and strategic direction needed to deliver sustainable, data-informed change across our focus areas.
     </p>
 
     <!-- Board Members Grid -->
-    <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px;">
+    <div class="board-container">
         <!-- Each Board Member -->
-        <div style="text-align: center; background: #fff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); overflow: hidden; transition: transform 0.3s, box-shadow 0.3s;">
-            <img src="images/team/akintoye-akindele.jpg" alt="Dr. Akintoye Akindele" style="width: 100%; height: auto; aspect-ratio: 1/1; object-fit: cover;">
-            <h3 style="margin: 10px 0 5px; font-size: 1.2em; color: #333;">Dr. Akintoye Akindele, CFA DBA FICA</h3>
-            <p style="font-size: 1em; color: #777; margin-bottom: 15px;">Founder/Chairman, Diatom Impact</p>
+        <div class="board-member">
+            <img src="images/team/akintoye-akindele.jpg" alt="Dr. Akintoye Akindele">
+            <h3>Dr. Akintoye Akindele, CFA DBA FICA</h3>
+            <p>Founder/Chairman, Diatom Impact</p>
         </div>
         
-        <div style="text-align: center; background: #fff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); overflow: hidden; transition: transform 0.3s, box-shadow 0.3s;">
-            <img src="images/team/soni-irabor.jpg.jpg" alt="Mr. Soni Irabor" style="width: 100%; height: auto; aspect-ratio: 1/1; object-fit: cover;">
-            <h3 style="margin: 10px 0 5px; font-size: 1.2em; color: #333;">Mr. Soni Irabor</h3>
-            <p style="font-size: 1em; color: #777; margin-bottom: 15px;">Director, Diatom Impact</p>
+        <div class="board-member">
+            <img src="images/team/soni-irabor.jpg.jpg" alt="Mr. Soni Irabor">
+            <h3>Mr. Soni Irabor</h3>
+            <p>Director, Diatom Impact</p>
         </div>
         
-        <div style="text-align: center; background: #fff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); overflow: hidden; transition: transform 0.3s, box-shadow 0.3s;">
-            <img src="images/team/dele-olawuyi.jpg" alt="Mr. Dele Olawuyi" style="width: 100%; height: auto; aspect-ratio: 1/1; object-fit: cover;">
-            <h3 style="margin: 10px 0 5px; font-size: 1.2em; color: #333;">Mr. Dele Olawuyi</h3>
-            <p style="font-size: 1em; color: #777; margin-bottom: 15px;">Director, Diatom Impact</p>
+        <div class="board-member">
+            <img src="images/team/dele-olawuyi.jpg" alt="Mr. Dele Olawuyi">
+            <h3>Mr. Dele Olawuyi</h3>
+            <p>Director, Diatom Impact</p>
         </div>
         
-        <div style="text-align: center; background: #fff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); overflow: hidden; transition: transform 0.3s, box-shadow 0.3s;">
-            <img src="images/team/matemilola-olori.jpg.jpeg" alt="Olori Data Matemilola" style="width: 100%; height: auto; aspect-ratio: 1/1; object-fit: cover;">
-            <h3 style="margin: 10px 0 5px; font-size: 1.2em; color: #333;">Olori Data Matemilola</h3>
-            <p style="font-size: 1em; color: #777; margin-bottom: 15px;">Director, Diatom Impact</p>
+        <div class="board-member">
+            <img src="images/team/matemilola-olori.jpg.jpeg" alt="Olori Data Matemilola">
+            <h3>Olori Data Matemilola</h3>
+            <p>Director, Diatom Impact</p>
         </div>
         
-        <div style="text-align: center; background: #fff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); overflow: hidden; transition: transform 0.3s, box-shadow 0.3s;">
-            <img src="images/team/nomso-diala.jpg.jpg" alt="Nomso Diala" style="width: 100%; height: auto; aspect-ratio: 1/1; object-fit: cover;">
-            <h3 style="margin: 10px 0 5px; font-size: 1.2em; color: #333;">Nomso Diala, MCIHRM, HRPL</h3>
-            <p style="font-size: 1em; color: #777; margin-bottom: 15px;">Director, Diatom Impact</p>
+        <div class="board-member">
+            <img src="images/team/nomso-diala.jpg.jpg" alt="Nomso Diala">
+            <h3>Nomso Diala, MCIHRM, HRPL</h3>
+            <p>Director, Diatom Impact</p>
         </div>
     </div>
 </section>

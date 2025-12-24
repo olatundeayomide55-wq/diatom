@@ -136,7 +136,125 @@
     </div>
   </div>
 </section>
+  
+<section style="max-width: 1200px; margin: 0 auto; padding: 20px;">
+    <style>
+        /* Grid Styling */
+        .board-container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr); /* Default: 5 items per row */
+            gap: 20px;
+        }
 
+        /* Responsive Design for Tablets */
+        @media (max-width: 768px) {
+            .board-container {
+                grid-template-columns: repeat(2, 1fr); /* 2 items per row on tablets */
+            }
+        }
+
+        /* Responsive Design for Mobile */
+        @media (max-width: 480px) {
+            .board-container {
+                grid-template-columns: repeat(1, 1fr); /* 1 item per row on mobile */
+            }
+        }
+
+        /* Individual Card Styling */
+        .board-member {
+            text-align: center;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .board-member:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .board-member img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 1/1; /* Ensures square images */
+            object-fit: cover; /* Scales images to fill */
+            border-radius: 8px;
+        }
+
+        .board-member h3 {
+            margin: 10px 0 5px;
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        .board-member p {
+            font-size: 1em;
+            color: #777;
+            margin: 5px 0;
+        }
+
+        .board-member .description {
+            font-size: 0.95em;
+            color: #555;
+            text-align: left;
+            line-height: 1.6;
+        }
+    </style>
+
+    <!-- Section Title -->
+    <h2 style="text-align: center; margin-bottom: 20px; font-size: 2em; color: #333;">Meet Our Board of Directors</h2>
+
+    <!-- Section Description -->
+    <p style="text-align: left; margin-bottom: 20px; font-size: 1.2em; color: #555; line-height: 1.6;">
+        Committed to integrity and long-term impact, our Board helps uphold the governance, transparency, and strategic direction needed to deliver sustainable, data-informed change across our focus areas.
+    </p>
+
+    <!-- Board Members Grid -->
+    <div class="board-container">
+        <!-- Dr. Akintoye Akindele -->
+        <div class="board-member">
+            <img src="images/team/akintoye-akindele.jpg" alt="Dr. Akintoye Akindele">
+            <h3>Dr. Akintoye Akindele, CFA DBA FICA</h3>
+            <p>Founder/Chairman</p>
+            <p class="description">Dr. Akintoye Akindele is a Nigerian investor, entrepreneur and author. He is the Founder and Chairman/CEO of Platform Capital, a growth-markets investment and advisory firm and also leads Diatom Impact, its impact-focused platform. He is widely recognized for backing entrepreneurship and sustainable development across Africa.</p>
+        </div>
+        
+        <!-- Mr. Soni Irabor -->
+        <div class="board-member">
+            <img src="images/team/soni-irabor.jpg.jpg" alt="Mr. Soni Irabor">
+            <h3>Mr. Soni Irabor</h3>
+            <p>Director</p>
+            <p class="description">Soni Irabor is a media icon, broadcaster and marketing communications professional with decades of experience across radio, television and brand storytelling. He hosts the long-running talk show “Soni Irabor Live”. Soni Irabor is also chairman of Ruyi Communications, a communications consultancy.</p>
+        </div>
+
+        <!-- Mr. Dele Olawuyi -->
+        <div class="board-member">
+            <img src="images/team/dele-olawuyi.jpg" alt="Mr. Dele Olawuyi">
+            <h3>Mr. Dele Olawuyi</h3>
+            <p>Director</p>
+            <p class="description">Dele Olawuyi is a technology entrepreneur with 20+ years’ experience building, scaling and advising high-impact ventures. Known for growth-driving, commercially viable solutions, he spots market opportunities and leads teams through complex innovation with clarity, active listening and disciplined execution.</p>
+        </div>
+
+        <!-- Olori Adabota Lydia Matemilola -->
+        <div class="board-member">
+            <img src="images/team/matemilola-olori.jpg.jpeg" alt="Olori Data Matemilola">
+            <h3>Olori Adabota Lydia Matemilola</h3>
+            <p>Director</p>
+            <p class="description">Olori Adabota Lydia Matemilola is the Executive Director of Solace Foundation and is a writer and children’s book author, known for using storytelling to champion learning, and culture. She is also the wife of His Royal Majesty Oba (Prof.) Saka Adelola Matemilola.</p>
+        </div>
+
+        <!-- Nomso Diala -->
+        <div class="board-member">
+            <img src="images/team/nomso-diala.jpg.jpg" alt="Nomso Diala">
+            <h3>Nomso Diala, MCIHRM, HRPL</h3>
+            <p>Director</p>
+            <p class="description">Nomso Diala is a people and talent leader. She is known for building practical HR systems that strengthen culture, performance, and operational excellence, supporting fast-moving teams through recruitment, employee experience, and leadership alignment.</p>
+        </div>
+    </div>
+</section>
 <!-- 4. AREAS OF FOCUS -->
 <section class="abt-focus">
   <div class="abt-container">
@@ -170,314 +288,6 @@
       </div>
     </div>
   </div>
-</section>
-  
-/* Board of directors */
-  <section class="board-section" aria-labelledby="board-title" style="max-width:1200px;margin:0 auto;padding:20px;">
-  <style>
-    /* Layout */
-    .board-section h2 { text-align:center; margin-bottom:12px; font-size:2em; color:#333; }
-    .board-section p.lead { text-align:left; margin-bottom:20px; font-size:1.05em; color:#555; line-height:1.6; }
-
-    .board-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr); /* default 5 per row */
-      gap: 20px;
-    }
-
-    @media (max-width: 1024px) {
-      .board-grid { grid-template-columns: repeat(3, 1fr); }
-    }
-
-    @media (max-width: 768px) {
-      .board-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-
-    @media (max-width: 480px) {
-      .board-grid { grid-template-columns: repeat(1, 1fr); }
-    }
-
-    /* Card / Flip */
-    .board-member { perspective: 1200px; }
-    .card {
-      position: relative;
-      width: 100%;
-      min-height: 340px;
-      border-radius: 8px;
-      background:#fff;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      overflow: visible;
-      cursor: pointer;
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
-      outline: none;
-    }
-    .card:focus { box-shadow: 0 10px 20px rgba(0,0,0,0.18); transform: translateY(-3px); }
-
-    .card__inner {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      transition: transform 0.7s cubic-bezier(.2,.8,.2,1);
-      transform-style: preserve-3d;
-    }
-
-    .card.is-flipped .card__inner { transform: rotateY(180deg); }
-
-    .card__face {
-      position: absolute;
-      inset: 0;
-      backface-visibility: hidden;
-      -webkit-backface-visibility: hidden;
-      border-radius: 8px;
-      display: flex;
-      flex-direction: column;
-      align-items: stretch;
-      justify-content: flex-start;
-      overflow: hidden;
-      background: #fff;
-    }
-
-    /* Front */
-    .card__face--front img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      display: block;
-      aspect-ratio: 1/1;
-    }
-    .card__body {
-      padding: 12px 14px 18px;
-      text-align: center;
-    }
-    .card h3 { margin: 8px 0 4px; font-size:1.05em; color:#222; }
-    .card p.title { margin:0 0 10px; color:#777; font-size:0.95em; }
-
-    /* Back */
-    .card__face--back {
-      transform: rotateY(180deg);
-      padding: 18px 16px;
-      box-sizing: border-box;
-      color:#222;
-    }
-    .bio { margin-top:6px; color:#444; line-height:1.45; font-size:0.96em; text-align:left; }
-    .bio small { display:block; margin-top:10px; color:#666; font-size:0.9em; }
-
-    /* Close button (for screen readers / explicit close) */
-    .close-btn {
-      margin-top:12px;
-      align-self:flex-start;
-      background:transparent;
-      border:1px solid #ddd;
-      color:#333;
-      padding:6px 10px;
-      border-radius:6px;
-      cursor:pointer;
-      font-size:0.9em;
-    }
-    .close-btn:hover { background:#f6f6f6; }
-
-    /* Hover lift */
-    .card:hover { transform: translateY(-6px); box-shadow: 0 12px 24px rgba(0,0,0,0.12); }
-
-    /* Accessibility focus */
-    .card:focus { box-shadow: 0 12px 24px rgba(0,0,0,0.12); }
-
-    /* Ensure the front & back content fully fill the card */
-    .card__face--front, .card__face--back { padding:0; }
-
-    /* Typography tweaks for back */
-    .card__face--back h3 { margin:0 0 6px; font-size:1.05em; }
-    .card__face--back p.title { margin:0 0 8px; color:#666; }
-
-    /* Small screens: make image shorter for better balance */
-    @media (max-width:480px) {
-      .card__face--front img { height:180px; }
-    }
-  </style>
-
-  <h2 id="board-title">Meet Our Board of Directors</h2>
-  <p class="lead">Committed to integrity and long-term impact, our Board helps uphold the governance, transparency, and strategic direction needed to deliver sustainable, data-informed change across our focus areas.</p>
-
-  <div class="board-grid" role="list">
-    <!-- Dr. Akintoye Akindele -->
-    <div class="board-member" role="listitem">
-      <div class="card" tabindex="0" role="button" aria-pressed="false" aria-label="View bio for Dr. Akintoye Akindele">
-        <div class="card__inner">
-          <div class="card__face card__face--front" aria-hidden="false">
-            <img src="images/team/akintoye-akindele.jpg" alt="Dr. Akintoye Akindele">
-            <div class="card__body">
-              <h3>Dr. Akintoye Akindele, CFA DBA FICA</h3>
-              <p class="title">Founder / Chairman, Diatom Impact</p>
-            </div>
-          </div>
-
-          <div class="card__face card__face--back" aria-hidden="true">
-            <h3>Dr. Akintoye Akindele, CFA DBA FICA</h3>
-            <p class="title">Founder / Chairman</p>
-            <p class="bio">Dr. Akintoye Akindele is a Nigerian investor, entrepreneur and author. He is the Founder and Chairman/CEO of Platform Capital, a growth-markets investment and advisory firm and also leads Diatom Impact, its impact-focused platform. He is widely recognized for backing entrepreneurship and sustainable development across Africa.</p>
-            <button class="close-btn" aria-label="Close bio">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Mr. Soni Irabor -->
-    <div class="board-member" role="listitem">
-      <div class="card" tabindex="0" role="button" aria-pressed="false" aria-label="View bio for Mr. Soni Irabor">
-        <div class="card__inner">
-          <div class="card__face card__face--front" aria-hidden="false">
-            <img src="images/team/soni-irabor.jpg.jpg" alt="Mr. Soni Irabor">
-            <div class="card__body">
-              <h3>Mr. Soni Irabor</h3>
-              <p class="title">Director, Diatom Impact</p>
-            </div>
-          </div>
-
-          <div class="card__face card__face--back" aria-hidden="true">
-            <h3>Mr. Soni Irabor</h3>
-            <p class="title">Director</p>
-            <p class="bio">Soni Irabor is a media icon, broadcaster and marketing communications professional with decades of experience across radio, television and brand storytelling. He hosts the long-running talk show “Soni Irabor Live”. Soni Irabor is also chairman of Ruyi Communications, a communications consultancy.</p>
-            <button class="close-btn" aria-label="Close bio">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Mr. Dele Olawuyi -->
-    <div class="board-member" role="listitem">
-      <div class="card" tabindex="0" role="button" aria-pressed="false" aria-label="View bio for Mr. Dele Olawuyi">
-        <div class="card__inner">
-          <div class="card__face card__face--front" aria-hidden="false">
-            <img src="images/team/dele-olawuyi.jpg" alt="Mr. Dele Olawuyi">
-            <div class="card__body">
-              <h3>Mr. Dele Olawuyi</h3>
-              <p class="title">Director, Diatom Impact</p>
-            </div>
-          </div>
-
-          <div class="card__face card__face--back" aria-hidden="true">
-            <h3>Mr. Dele Olawuyi</h3>
-            <p class="title">Director</p>
-            <p class="bio">Dele Olawuyi is a technology entrepreneur with 20+ years’ experience building, scaling and advising high-impact ventures. Known for growth-driving, commercially viable solutions, he spots market opportunities and leads teams through complex innovation with clarity, active listening and disciplined execution.</p>
-            <button class="close-btn" aria-label="Close bio">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Olori Adabota Lydia Matemilola -->
-    <div class="board-member" role="listitem">
-      <div class="card" tabindex="0" role="button" aria-pressed="false" aria-label="View bio for Olori Adabota Lydia Matemilola">
-        <div class="card__inner">
-          <div class="card__face card__face--front" aria-hidden="false">
-            <img src="images/team/matemilola-olori.jpg.jpeg" alt="Olori Adabota Lydia Matemilola">
-            <div class="card__body">
-              <h3>Olori Adabota Lydia Matemilola</h3>
-              <p class="title">Director, Diatom Impact</p>
-            </div>
-          </div>
-
-          <div class="card__face card__face--back" aria-hidden="true">
-            <h3>Olori Adabota Lydia Matemilola</h3>
-            <p class="title">Director</p>
-            <p class="bio">Olori Adabota Lydia Matemilola is the Executive Director of Solace Foundation and is a writer and children’s book author, known for using storytelling to champion learning and culture. She is also the wife of His Royal Majesty Oba (Prof.) Saka Adelola Matemilola.</p>
-            <button class="close-btn" aria-label="Close bio">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Nomso Diala -->
-    <div class="board-member" role="listitem">
-      <div class="card" tabindex="0" role="button" aria-pressed="false" aria-label="View bio for Nomso Diala">
-        <div class="card__inner">
-          <div class="card__face card__face--front" aria-hidden="false">
-            <img src="images/team/nomso-diala.jpg.jpg" alt="Nomso Diala">
-            <div class="card__body">
-              <h3>Nomso Diala, MCIHRM, HRPL</h3>
-              <p class="title">Director, Diatom Impact</p>
-            </div>
-          </div>
-
-          <div class="card__face card__face--back" aria-hidden="true">
-            <h3>Nomso Diala, MCIHRM, HRPL</h3>
-            <p class="title">Director</p>
-            <p class="bio">Nomso Diala is a people and talent leader. She is known for building practical HR systems that strengthen culture, performance, and operational excellence, supporting fast-moving teams through recruitment, employee experience, and leadership alignment.</p>
-            <button class="close-btn" aria-label="Close bio">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <script>
-    (function () {
-      // Toggle flip on click or Enter/Space. Also provide close buttons.
-      const cards = document.querySelectorAll('.board-section .card');
-
-      function setAria(card, flipped) {
-        const inner = card.querySelector('.card__inner');
-        const front = card.querySelector('.card__face--front');
-        const back = card.querySelector('.card__face--back');
-        card.setAttribute('aria-pressed', flipped ? 'true' : 'false');
-        if (flipped) {
-          front.setAttribute('aria-hidden', 'true');
-          back.setAttribute('aria-hidden', 'false');
-        } else {
-          front.setAttribute('aria-hidden', 'false');
-          back.setAttribute('aria-hidden', 'true');
-        }
-      }
-
-      cards.forEach(card => {
-        // click toggles
-        card.addEventListener('click', function (e) {
-          // avoid triggering when clicking the close button (it will handle itself)
-          const isClose = e.target.closest('.close-btn');
-          if (isClose) return;
-          const flipped = card.classList.toggle('is-flipped');
-          setAria(card, flipped);
-        });
-
-        // keyboard support (Enter / Space to toggle)
-        card.addEventListener('keydown', function (e) {
-          if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
-            e.preventDefault();
-            const flipped = card.classList.toggle('is-flipped');
-            setAria(card, flipped);
-          } else if (e.key === 'Escape') {
-            card.classList.remove('is-flipped');
-            setAria(card, false);
-          }
-        });
-
-        // close button on the back
-        const closeBtn = card.querySelector('.close-btn');
-        if (closeBtn) {
-          closeBtn.addEventListener('click', function (e) {
-            e.stopPropagation();
-            card.classList.remove('is-flipped');
-            setAria(card, false);
-            card.focus();
-          });
-        }
-      });
-
-      // Optional: close any flipped card if user clicks outside a card
-      document.addEventListener('click', function (e) {
-        const inBoard = !!e.target.closest('.board-section');
-        if (!inBoard) {
-          cards.forEach(c => {
-            if (c.classList.contains('is-flipped')) {
-              c.classList.remove('is-flipped');
-              setAria(c, false);
-            }
-          });
-        }
-      });
-    })();
-  </script>
 </section>
   
 <!-- 6. IMPACT TRACKER -->

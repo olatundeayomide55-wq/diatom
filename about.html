@@ -174,38 +174,29 @@
 
   
 <!-- 5. BOARD OF DIRECTORS -->
-  <section style="max-width: 1200px; margin: 0 auto; padding: 20px;">
+<section style="max-width: 1200px; margin: 0 auto; padding: 20px; text-align: center;">
     <style>
         /* Grid Styling */
         .board-container {
             display: grid;
-            grid-template-columns: repeat(1, 1fr); /* Default for Mobile: 1 item per row */
+            grid-template-columns: repeat(1, 1fr); /* Default: Mobile: 1 item per row */
             gap: 20px;
+            justify-content: center; /* Center grid content horizontally */
         }
 
-        /* Design for Laptops and Desktops (3 cards on top, 2 below) */
-        @media (min-width: 769px) and (max-width: 1200px) {
+        /* Laptop and Larger Screens: 3 Items on Top, 2 Items Below */
+        @media (min-width: 769px) {
             .board-container {
                 grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+                gap: 30px; /* Slightly larger spacing */
             }
             .board-container .board-member:nth-child(4),
             .board-container .board-member:nth-child(5) {
-                grid-column: span 1; /* Moves the last two items to the second row */
+                grid-column: span 1; /* Move last 2 items to their row */
             }
         }
 
-        /* Design for Large Monitors */
-        @media (min-width: 1201px) {
-            .board-container {
-                grid-template-columns: repeat(3, 1fr); /* Same layout as laptops */
-            }
-            .board-container .board-member:nth-child(4),
-            .board-container .board-member:nth-child(5) {
-                grid-column: span 1; /* Moves the last two items to the second row */
-            }
-        }
-
-        /* General Individual Card Styling */
+        /* Individual Card Styling */
         .board-member {
             text-align: center;
             background: #fff;
@@ -244,24 +235,21 @@
         .board-member .description {
             font-size: 0.95em;
             color: #555;
-            text-align: left;
+            text-align: left; /* Left-align long descriptions for readability */
             line-height: 1.6;
         }
 
-        /* Center the Subheading */
-        .board-subheading {
+        /* Center Subheading and Section Description */
+        .board-title, .board-subheading {
             text-align: center;
-            font-size: 1.2em;
-            color: #555;
-            line-height: 1.6;
         }
     </style>
 
-    <!-- DIRECTORS -->
-    <h2 style="text-align: center; margin-bottom: 20px; font-size: 2em; color: #333;">Meet Our Board of Directors</h2>
+    <!-- Section Title -->
+    <h2 class="board-title" style="font-size: 2em; color: #333; margin-bottom: 20px;">Meet Our Board of Directors</h2>
 
-    <!-- DIRECTORS INFO -->
-    <p class="board-subheading">
+    <!-- Section Description -->
+    <p class="board-subheading" style="font-size: 1.2em; color: #555; line-height: 1.6; margin-bottom: 20px;">
         Committed to integrity and long-term impact, our Board helps uphold the governance, transparency, and strategic direction needed to deliver sustainable, data-informed change across our focus areas.
     </p>
 
@@ -274,10 +262,10 @@
             <p>Founder/Chairman</p>
             <p class="description">Dr. Akintoye Akindele is a Nigerian investor, entrepreneur and author. He is the Founder and Chairman/CEO of Platform Capital, a growth-markets investment and advisory firm and also leads Diatom Impact, its impact-focused platform. He is widely recognized for backing entrepreneurship and sustainable development across Africa.</p>
         </div>
-        
+
         <!-- Mr. Soni Irabor -->
         <div class="board-member">
-            <img src="images/team/soni-irabor.jpg.jpg" alt="Mr. Soni Irabor">
+            <img src="images/team/soni-irabor.jpg" alt="Mr. Soni Irabor">
             <h3>Mr. Soni Irabor</h3>
             <p>Director</p>
             <p class="description">Soni Irabor is a media icon, broadcaster and marketing communications professional with decades of experience across radio, television and brand storytelling. He hosts the long-running talk show “Soni Irabor Live”. Soni Irabor is also chairman of Ruyi Communications, a communications consultancy.</p>
@@ -293,7 +281,7 @@
 
         <!-- Olori Adabota Lydia Matemilola -->
         <div class="board-member">
-            <img src="images/team/matemilola-olori.jpg.jpeg" alt="Olori Data Matemilola">
+            <img src="images/team/matemilola-olori.jpg" alt="Olori Data Matemilola">
             <h3>Olori Adabota Lydia Matemilola</h3>
             <p>Director</p>
             <p class="description">Olori Adabota Lydia Matemilola is the Executive Director of Solace Foundation and is a writer and children’s book author, known for using storytelling to champion learning, and culture. She is also the wife of His Royal Majesty Oba (Prof.) Saka Adelola Matemilola.</p>
@@ -301,13 +289,14 @@
 
         <!-- Nomso Diala -->
         <div class="board-member">
-            <img src="images/team/nomso-diala.jpg.jpg" alt="Nomso Diala">
+            <img src="images/team/nomso-diala.jpg" alt="Nomso Diala">
             <h3>Nomso Diala, MCIHRM, HRPL</h3>
             <p>Director</p>
             <p class="description">Nomso Diala is a people and talent leader. She is known for building practical HR systems that strengthen culture, performance, and operational excellence, supporting fast-moving teams through recruitment, employee experience, and leadership alignment.</p>
         </div>
     </div>
 </section>
+  
 <!-- 6. IMPACT TRACKER -->
 <section class="xi-impact-section" id="xi-impact">
   <div class="xi-impact-wrap">
